@@ -149,7 +149,7 @@ It measures:
 - Non-bank lenders increased exposure to **uninsured mortgages** following COVID-19.
 - A larger share of credit risk that was previously transferred to insurers is increasingly **retained on lender balance sheets**.
 - Higher uninsured growth volatility may amplify risk during periods of **tight monetary policy** or economic stress.
-- The added delinquency analysis introduces a **performance-based** check on risk: exposure trends can now be evaluated alongside **arrears outcomes**.
+- The added delinquency analysis introduces a **performancee based** check on risk: exposure trends can now be evaluated alongside **arrears outcomes**.
 
 ---
 
