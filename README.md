@@ -110,12 +110,46 @@ Results show that uninsured mortgage growth outpaced insured growth in the post-
 
 ---
 
+## Credit Performance Analysis
+
+### Processed Table — Delinquency Rate Time Series
+
+A new processed dataset is generated via SQL:
+
+- `processed_sql_data/nonbank_delinquency_rates.csv`
+
+It measures:
+
+- **Delinquency rate (%)** = (mortgages in arrears) / (mortgages outstanding)
+- Split by **insured vs uninsured**
+- Includes **severe delinquency (over 90 days)** rates
+
+### Chart 4 — Delinquency Rates (Insured vs Uninsured)
+
+![Delinquency rates](res/delinquency_rates.png)
+
+**Interpretation**
+
+- Provides a **credit-performance** lens that complements exposure and volatility metrics.
+- Enables comparison of insured vs uninsured portfolios using **arrears behavior**, not just growth trends.
+
+### Chart 5 — Severe Delinquency (Over 90 Days)
+
+![Severe delinquency](res/severe_delinquency_over90.png)
+
+**Interpretation**
+
+- Over-90-days arrears is a **stress indicator** for persistent delinquency risk.
+- Useful for evaluating whether risk growth is accompanied by deterioration in credit outcomes.
+
+---
+
 ## Key Findings & Implications
 
-- Non-bank lenders increased exposure to **uninsured mortgages** following COVID-19
-- Credit risk previously transferred to insurers is increasingly **retained on lenders’ balance sheets**
-- This shift may amplify **systemic risk during periods of rising interest rates or economic stress**
-- Results highlight the growing importance of non-bank lenders in Canada’s housing finance system
+- Non-bank lenders increased exposure to **uninsured mortgages** following COVID-19.
+- A larger share of credit risk that was previously transferred to insurers is increasingly **retained on lender balance sheets**.
+- Higher uninsured growth volatility may amplify risk during periods of **tight monetary policy** or economic stress.
+- The added delinquency analysis introduces a **performance-based** check on risk: exposure trends can now be evaluated alongside **arrears outcomes**.
 
 ---
 
@@ -126,6 +160,13 @@ Results show that uninsured mortgage growth outpaced insured growth in the post-
 - Mortgage value trends (insured vs uninsured vs total)
 - Uninsured mortgage share over time
 - Growth volatility comparison
+- Delinquency rates (insured vs uninsured)
+- Severe delinquency (over 90 days)
+
+### Data Tables
+
+- Processed analysis tables used for charts
+- `processed_sql_data/nonbank_delinquency_rates.csv`
 
 ### Written Deliverables
 
@@ -137,7 +178,9 @@ Results show that uninsured mortgage growth outpaced insured growth in the post-
 
 ## Tools & Methods
 
-- **Python** (Pandas, Matplotlib)
+- **SQL (SQLite)** for reproducible table construction and exports
+- **Python** (Pandas, Matplotlib) for time-series cleaning and visualization
 - Time-series analysis
-- Risk metric construction
+- Risk metric construction (share, growth, volatility)
+- Credit-performance metrics (arrears rates; over-90-days severe delinquency)
 - Pre/post structural comparison
